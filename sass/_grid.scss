@@ -1,0 +1,56 @@
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+/// GRID (css grid)
+///
+
+$header-height: 5rem;
+
+.container {
+  display: grid;
+  grid-template-columns:
+    [sidebar-start] 20.5rem [sidebar-end full-start] minmax(5rem, 1fr)
+    [center-start]
+    repeat(8, [col-start] minmax(min-content, 1fr) [col-end])
+    [center-end]
+    minmax(3rem, 1fr) [full-end];
+  grid-template-rows: 5rem 100vh 10rem;
+}
+
+.header {
+  grid-column: sidebar-start / full-end;
+  grid-row: 1 / 2;
+
+  background-color: $color-primary;
+  border-bottom: 0.01rem solid darken($color-gray-light, 5%);
+  color: $color-gray-light;
+  font-size: 2rem;
+
+  position: sticky;
+  top: 0;
+}
+
+.tabs__sidebar {
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 2 / -1;
+
+  background-color: $color-primary;
+  color: $color-white;
+
+  /***********************
+  **** Fixes the Tabs Menu below header
+  ***********************/
+  height: calc(100vh - $header-height);
+  position: sticky;
+  top: $header-height;
+}
+
+.tabs__content {
+  grid-column: full-start / full-end;
+  grid-row: 2 / 3;
+  border-bottom: 0.2rem solid darken($color-gray-light, 5%);
+}
+
+.footer {
+  grid-column: full-start / full-end;
+  grid-row: 3 / -1;
+}

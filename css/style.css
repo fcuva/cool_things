@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+  border: none;
+  box-sizing: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #e5e5e5;
+  color: #191919;
+  font-family: sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [sidebar-start] 20.5rem [sidebar-end full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+  grid-template-rows: 5rem 100vh 10rem;
+}
+
+.header {
+  grid-column: sidebar-start/full-end;
+  grid-row: 1/2;
+  background-color: #18467b;
+  border-bottom: 0.01rem solid #d8d8d8;
+  color: #e5e5e5;
+  font-size: 2rem;
+  position: sticky;
+  top: 0;
+}
+
+.tabs__sidebar {
+  grid-column: sidebar-start/sidebar-end;
+  grid-row: 2/-1;
+  background-color: #18467b;
+  color: #fff;
+  /***********************
+  **** Fixes the Tabs Menu below header
+  ***********************/
+  height: calc(100vh - 5rem);
+  position: sticky;
+  top: 5rem;
+}
+
+.tabs__content {
+  grid-column: full-start/full-end;
+  grid-row: 2/3;
+  border-bottom: 0.2rem solid #d8d8d8;
+}
+
+.footer {
+  grid-column: full-start/full-end;
+  grid-row: 3/-1;
+}
