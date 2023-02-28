@@ -9,12 +9,186 @@
     <title>HASKELL Company</title>
   </head>
   <body class="container">
-    <header class="header">HEADER</header>
+    <header class="header">
+      <img
+        src="./img/haskell-logo-white.png"
+        alt="Haskell Logo"
+        class="header__logo"
+      />
+      <p class="header__title">Design Center</p>
+      <nav class="header__nav">
+        <ul class="header__nav-ul">
+          <!-- <li class="header__nav-li">TEMP</li> -->
+          <li class="header__nav-li">
+            <a href="#" class="header__nav-li-signout">
+              <svg class="header__nav-li-signout-icon">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="./img/sprite.svg#signout"
+                ></use>
+              </svg>
+              <span class="header__nav-li-tooltip">Sign out</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <aside class="tabs__sidebar">
-      TABS SIDEBAR
-      <div class="temp">© 2023 Haskell. All rights reserved.</div>
+      <ul class="tabs__sidebar-ul">
+        <li class="tabs__sidebar-li">
+          <svg class="tabs__sidebar-li-icon">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="./img/sprite.svg#charts"
+            ></use>
+          </svg>
+          <span class="tabs__sidebar-li-title">Dashboard</span>
+        </li>
+        <li class="tabs__sidebar-li">
+          <svg class="tabs__sidebar-li-icon">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="./img/sprite.svg#people"
+            ></use>
+          </svg>
+          <span class="tabs__sidebar-li-title">Workforce</span>
+        </li>
+        <li class="tabs__sidebar-li">
+          <svg class="tabs__sidebar-li-icon">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="./img/sprite.svg#calendar"
+            ></use>
+          </svg>
+          <span class="tabs__sidebar-li-title">Activity Pgrm</span>
+        </li>
+        <li class="tabs__sidebar-li">
+          <svg class="tabs__sidebar-li-icon">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="./img/sprite.svg#pm"
+            ></use>
+          </svg>
+          <span class="tabs__sidebar-li-title">Project Mgt</span>
+        </li>
+        <div class="tabs__sidebar-slider"></div>
+      </ul>
+      <!-- SIDEBAR FOOTER -->
+      <div class="tabs__sidebar-footer">
+        © 2023 Haskell. All rights reserved.
+      </div>
     </aside>
-    <section class="tabs__content">TABS Content</section>
-    <footer class="footer">FOOTER</footer>
+
+    <section class="tabs__content">
+      <section class="tabs__content--item" style="display: block">
+        <section class="tabs__content-gralst">
+          <div class="general__statistics-container">
+            <div class="general__statistics-box">
+              <svg class="general__statistics-icon">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="./img/sprite.svg#workforce"
+                ></use>
+              </svg>
+              <div class="general__statistics-content">
+                <p class="counter-amount" data-number="215">
+                  <span class="num">0</span>
+                </p>
+                <p class="text">WKFC Total</p>
+              </div>
+            </div>
+
+            <div class="general__statistics-box">
+              <svg class="general__statistics-icon">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="./img/sprite.svg#workingforce"
+                ></use>
+              </svg>
+              <div class="general__statistics-content">
+                <p class="counter-amount" data-number="3.7">
+                  <span class="num">0</span><span>%</span>
+                </p>
+                <p class="text">WKFC available</p>
+                <!-- 8 memebers without assigned activities Total -->
+              </div>
+            </div>
+
+            <div class="general__statistics-box">
+              <svg class="general__statistics-icon">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="./img/sprite.svg#currency"
+                ></use>
+              </svg>
+              <div class="general__statistics-content">
+                <p class="counter-amount" data-number="9.1">
+                  <span class="num">0</span> <span>M</span>
+                </p>
+                <p class="text">Center Cost</p>
+              </div>
+            </div>
+
+            <div class="general__statistics-box">
+              <svg class="general__statistics-icon">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="./img/sprite.svg#graphup"
+                ></use>
+              </svg>
+              <div class="general__statistics-content">
+                <p class="counter-amount" data-number="18.1">
+                  <span class="num">0</span> <span>%</span>
+                </p>
+                <p class="text">Net profit +5.5%</p>
+              </div>
+            </div>
+
+            <div class="general__statistics-box">
+              <svg class="general__statistics-icon">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="./img/sprite.svg#compliance"
+                ></use>
+              </svg>
+              <div class="general__statistics-content">
+                <p class="counter-amount" data-number="88.9">
+                  <span class="num">0</span> <span>%</span>
+                </p>
+                <p class="text">Trng. compliance</p>
+              </div>
+            </div>
+
+            <div class="general__statistics-box">
+              <svg class="general__statistics-icon">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="./img/sprite.svg#clock"
+                ></use>
+              </svg>
+              <div class="general__statistics-content">
+                <p class="counter-amount" data-number="29">
+                  <span class="num">0</span> <span>%</span>
+                </p>
+                <p class="text">Over 5,200 hrs</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="tabs__content--item" style="display: none">
+        WORKFORCE
+      </section>
+      <section class="tabs__content--item" style="display: none">
+        Activity Program
+      </section>
+      <section class="tabs__content--item" style="display: none">
+        Project Management
+      </section>
+    </section>
+    <footer class="footer" style="display: none">FOOTER</footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -3,10 +3,14 @@
 //////  VARIABLES
 
 /// COLOR
-$color-primary: #18467b;
+// $color-primary: #18467b;
+$color-primary: #003359;
+$color-primary-light: #0069aa;
 $color-secondary: #ffc425;
-$color-gray-light: #e5e5e5;
-$color-gray-dark: #191919;
+$color-tertiary: #f89728;
+$color-quartiary: #b2bb1e;
+$color-gray-light: #e8e7e7;
+$color-gray-dark: #807f83;
 $color-white: #fff;
 $color-black: #000;
 $color-signin-error: #ff4500;
@@ -16,6 +20,8 @@ $font-primary: sans-serif;
 
 /// UTILS
 $border-radius-corner: 0.8rem;
+$tab-height: 4.5rem;
+$tab-width: 20.5rem;
 $transition-slow-out: all 0.3s ease-out;
 
 //////////////////////////////////////////////////////////////
@@ -28,6 +34,7 @@ $transition-slow-out: all 0.3s ease-out;
 *::before {
   border: none;
   box-sizing: inherit;
+  list-style: none;
   margin: 0;
   outline: 0;
   padding: 0;

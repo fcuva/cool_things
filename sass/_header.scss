@@ -1,0 +1,103 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $color-primary;
+  border-bottom: 0.01rem solid darken($color-gray-light, 5%);
+  color: $color-gray-light;
+  font-size: 2rem;
+  padding: 0.3rem 3rem;
+  padding-right: 6rem; // tooltip
+
+  &__logo {
+    display: inline-block;
+    height: 3rem;
+    width: auto;
+  }
+
+  &__title {
+    color: $color-secondary;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  &__nav {
+    // outline: 1px solid red;
+
+    &-ul {
+      //   outline: 1px solid yellow;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    &-li {
+      display: inline-block;
+
+      // a - signout link
+      &-signout {
+        display: inline-block;
+        position: relative; // tooltip
+        transition: $transition-slow-out;
+
+        &:link,
+        &:visited {
+          display: inline-block;
+          width: max-content;
+
+          font-size: 1.2rem;
+          color: $color-white;
+        }
+
+        &-icon {
+          align-self: center;
+          justify-content: center;
+          padding-top: 0.7rem;
+
+          fill: $color-white;
+          height: 3.5rem;
+          width: 3.5rem;
+        }
+
+        &:hover,
+        &:active {
+          transform: scale(1.05);
+        }
+
+        &:hover .header__nav-li-tooltip {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &-tooltip {
+        position: absolute;
+        top: 0.8rem;
+        right: -150%;
+        z-index: 2;
+
+        background-color: $color-white;
+        border-radius: $border-radius-corner;
+        color: $color-primary;
+        padding: 0.3rem 0.3rem;
+        width: max-content;
+
+        visibility: hidden;
+        opacity: 0;
+
+        &::after {
+          content: "";
+          position: inherit;
+          top: 50%;
+          right: 100%;
+          margin-top: -0.5rem;
+          border-width: 0.5rem;
+          border-style: solid;
+          border-color: transparent $color-white transparent transparent;
+        }
+      }
+    }
+  }
+}
